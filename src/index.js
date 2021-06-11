@@ -11,15 +11,12 @@ const theme = extendTheme({
   },
 });
 
-// const appId = "CkGKKjw1WWWWNAo2GRMO1yPyjTrRx8YAIX4E8Q8q";
-// const serverUrl = "https://jlodflimpqon.moralis.io:2053/server";
+const appId = "CkGKKjw1WWWWNAo2GRMO1yPyjTrRx8YAIX4E8Q8q";
+const serverUrl = "https://jlodflimpqon.moralis.io:2053/server";
 
 ReactDOM.render(
   <React.StrictMode>
-    <MoralisProvider
-      appId="CkGKKjw1WWWWNAo2GRMO1yPyjTrRx8YAIX4E8Q8q"
-      serverUrl="https://jlodflimpqon.moralis.io:2053/server"
-    >
+    <MoralisProvider appId={appId} serverUrl={serverUrl}>
       <ChakraProvider theme={theme}>
         <App />
       </ChakraProvider>
