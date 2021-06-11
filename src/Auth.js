@@ -1,17 +1,7 @@
-import {
-  Button,
-  Alert,
-  AlertIcon,
-  Box,
-  AlertTitle,
-  AlertDescription,
-  CloseButton,
-  Input,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Button, Input, Stack, Text } from "@chakra-ui/react";
 import { useMoralis } from "react-moralis";
 import { useState } from "react";
+import { ErrorBox } from "./Error";
 
 const SignUp = () => {
   const { signup } = useMoralis();
@@ -62,16 +52,10 @@ export const Auth = () => {
   return (
     <Stack spacing={6}>
       {authError && (
-        <Alert status="error">
-          <AlertIcon />
-          <Box flex="1">
-            <AlertTitle>Authentication has failed.</AlertTitle>
-            <AlertDescription display="block">
-              {authError.message}
-            </AlertDescription>
-          </Box>
-          <CloseButton position="absolute" right="8px" top="8px" />
-        </Alert>
+        <ErrorBox
+          title="Authentication has failed."
+          message={authError.message}
+        />
       )}
       <Button isLoading={isAuthenticating} onClick={() => authenticate()}>
         Authenticate via MetaMask
