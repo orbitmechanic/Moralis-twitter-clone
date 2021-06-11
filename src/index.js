@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { MoralisProvider } from "react-moralis";
 
 const theme = extendTheme({
   config: {
@@ -10,11 +11,16 @@ const theme = extendTheme({
   },
 });
 
+const appId = "CkGKKjw1WWWWNAo2GRMO1yPyjTrRx8YAIX4E8Q8q";
+const serverUrl = "https://jlodflimpqon.moralis.io:2053/server";
+
 ReactDOM.render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <App />
-    </ChakraProvider>
+    <MoralisProvider appID={appId} serverUrl={serverUrl}>
+      <ChakraProvider theme={theme}>
+        <App />
+      </ChakraProvider>
+    </MoralisProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
