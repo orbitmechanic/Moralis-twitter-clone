@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import App from "./components/App";
+import reportWebVitals from "./components/Support/reportWebVitals";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { MoralisProvider } from "react-moralis";
 import { BrowserRouter } from "react-router-dom";

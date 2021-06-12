@@ -1,7 +1,7 @@
 import { Box, Button, Input, Stack, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import { useMoralis } from "react-moralis";
-import { ErrorBox } from "./Error";
+import { ErrorBox } from "../Support/Error";
 
 export const Profile = () => {
   const { user, setUserData, userError, isUserUpdating } = useMoralis();

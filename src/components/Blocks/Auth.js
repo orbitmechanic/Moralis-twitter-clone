@@ -1,7 +1,7 @@
 import { Button, Input, Stack, Text } from "@chakra-ui/react";
 import { useMoralis } from "react-moralis";
 import { useState } from "react";
-import { ErrorBox } from "./Error";
+import { ErrorBox } from "../Support/Error";
 
 const SignUp = () => {
   const { signup } = useMoralis();

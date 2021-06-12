@@ -2,9 +2,9 @@ import { Box, Button, Avatar } from "@chakra-ui/react";
 import { Container, Heading, Flex, Spacer } from "@chakra-ui/layout";
 import { useMoralis, ByMoralis } from "react-moralis";
 import { Link, Switch, Route, Redirect } from "react-router-dom";
-import { Auth } from "./Auth";
-import { Home } from "./Home";
-import { Profile } from "./Profile";
+import { Auth } from "./Blocks/Auth";
+import { Home } from "./Pages/Home";
+import { Profile } from "./Pages/Profile";
 
 function App() {
   const { isAuthenticated, isAuthUndefined, logout, user } = useMoralis();
