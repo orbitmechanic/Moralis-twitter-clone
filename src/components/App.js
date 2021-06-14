@@ -17,7 +17,7 @@ function App() {
         <Spacer />
         {isAuthenticated && (
           <Link to="/profile">
-            <Avatar name={user.attributes.username} />
+            <Avatar name={user ? user.attributes.username : "?"} />
           </Link>
         )}
       </Flex>
