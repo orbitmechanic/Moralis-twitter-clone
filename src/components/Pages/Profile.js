@@ -1,4 +1,4 @@
-import { Box, Button, Input, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Input, Heading, Stack, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import { useMoralis } from "react-moralis";
 import { ErrorBox } from "../Support/Error";
@@ -21,6 +21,7 @@ export const Profile = () => {
   return (
     <Box>
       <Stack spacing={3}>
+        <Heading>Profile</Heading>
         {userError && (
           <ErrorBox
             title="User data update failed."

@@ -1,9 +1,9 @@
 import { Box, Heading } from "@chakra-ui/react";
 
-export const Guides = () => {
+export const Invest = () => {
   return (
     <Box>
-      <Heading>Guides</Heading>
+      <Heading>Invest</Heading>
     </Box>
   );
 };
