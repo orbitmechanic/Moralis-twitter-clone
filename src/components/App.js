@@ -2,13 +2,12 @@ import {
   Avatar,
   Box,
   Button,
-  Center,
   IconButton,
   useColorMode,
 } from "@chakra-ui/react";
 import { Flex, Heading, Spacer, HStack, VStack } from "@chakra-ui/layout";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
-import { useMoralis, ByMoralis } from "react-moralis";
+import { useMoralis } from "react-moralis";
 import { Link, Switch, Route, Redirect } from "react-router-dom";
 import { Auth } from "./Blocks/Auth";
 import { Dashboard } from "./Pages/Dashboard";

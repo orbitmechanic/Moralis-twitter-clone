@@ -4,9 +4,9 @@ import {
   Box,
   AlertTitle,
   AlertDescription,
-  CloseButton,
 } from "@chakra-ui/react";
-export const ErrorBox = ({ title, message }) => {
+
+export const ErrorBox = ({ title, message, updateParent }) => {
   return (
     <Alert status="error">
       <AlertIcon />
@@ -14,7 +14,6 @@ export const ErrorBox = ({ title, message }) => {
         <AlertTitle>{title}</AlertTitle>
         <AlertDescription display="block">{message}</AlertDescription>
       </Box>
-      <CloseButton position="absolute" right="8px" top="8px" />
     </Alert>
   );
 };
